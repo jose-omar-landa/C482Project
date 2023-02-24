@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0" prefWidth="746.0" text="Modify Part" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ims.ims.ModifyPartController">
+    <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <children>
+                <RadioButton fx:id="modifyPartInHouseRadio" layoutX="136.0" layoutY="69.0" mnemonicParsing="false" onAction="#onModifyPartInHouseRadio" selected="true" text="In-House">
+               <toggleGroup>
+                  <ToggleGroup fx:id="modifyPartsRadioToggle" />
+               </toggleGroup></RadioButton>
+                <RadioButton fx:id="modifyPartOutsourcedRadio" layoutX="416.0" layoutY="69.0" mnemonicParsing="false" onAction="#onModifyPartOutsourcedRadio" text="Outsourced" toggleGroup="$modifyPartsRadioToggle" />
+                <Label layoutX="136.0" layoutY="173.0" text="ID" />
+                <Label layoutX="136.0" layoutY="233.0" text="Name" />
+                <Label layoutX="136.0" layoutY="294.0" text="Inventory" />
+                <Label layoutX="136.0" layoutY="359.0" text="Price" />
+                <Label layoutX="136.0" layoutY="426.0" text="Max" />
+                <Label layoutX="416.0" layoutY="426.0" text="Min" />
+                <TextField fx:id="modifyPartIdText" disable="true" editable="false" layoutX="236.0" layoutY="178.0" onAction="#onModifyPartIdText" />
+                <TextField fx:id="modifyPartNameText" layoutX="236.0" layoutY="229.0" onAction="#onModifyPartNameText" />
+                <TextField fx:id="modifyPartInventoryText" layoutX="236.0" layoutY="290.0" onAction="#onModifyPartInventoryText" />
+                <TextField fx:id="modifyPartPriceText" layoutX="236.0" layoutY="355.0" onAction="#onModifyPartPriceText" />
+                <TextField fx:id="modifyPartMaxText" layoutX="236.0" layoutY="422.0" onAction="#onModifyPartMaxText" />
+                <TextField fx:id="modifyPartMinText" layoutX="462.0" layoutY="422.0" onAction="#onModifyPartMinText" />
+                <TextField fx:id="modifyPartMachineIdText" layoutX="236.0" layoutY="482.0" onAction="#onModifyPartMachineIdText" />
+                <Label fx:id="modifyPartLabelMachineId" layoutX="138.0" layoutY="486.0" text="Machine ID" />
+                <Button fx:id="modifyPartSaveButton" layoutX="511.0" layoutY="528.0" mnemonicParsing="false" onAction="#onModifyPartSaveButton" text="Save" />
+                <Button fx:id="modifyPartCancelButton" layoutX="612.0" layoutY="528.0" mnemonicParsing="false" onAction="#onModifyPartCancelButton" text="Cancel" />
+            </children></AnchorPane>
+    </content>
+</TitledPane>
